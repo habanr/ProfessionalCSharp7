@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System;
+using static System.Console;
 
 namespace VirtualMethods
 {
@@ -28,6 +29,16 @@ namespace VirtualMethods
             Position.X = newPosition.X;
             Position.Y = newPosition.Y;
             WriteLine($"moves to {Position}");
+        }
+
+        public void MoveBy(int deltaX, int deltaY)
+        {
+            Console.Write("Rectangle ");
+            var newPos = new Position
+            {
+                X = Position.X + deltaX,
+                Y = Position.Y + deltaY
+            };
         }
 
         public abstract void Resize(int width, int height);

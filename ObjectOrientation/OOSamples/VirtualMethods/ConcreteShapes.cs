@@ -13,6 +13,18 @@ namespace VirtualMethods
             base.Move(newPosition);
         }
 
+        new public void MoveBy(int deltaX, int deltaY)
+        {
+            Console.Write("Rectangle ");
+            var newPos = new Position
+            {
+                X = Position.X + deltaX,
+                Y = Position.Y + deltaY
+            };
+
+            base.Move(newPos);
+        }
+
         public override void Resize(int width, int height)
         {
             throw new NotImplementedException();
@@ -29,5 +41,9 @@ namespace VirtualMethods
             Size.Width = width;
             Size.Height = height;
         }
+
+
+        public override void Draw() =>
+            Console.WriteLine($"Ellipse with {Position} and {Size}");
     }
 }
