@@ -67,8 +67,8 @@ namespace ParallelSamples
             ParallelLoopResult result =
               Parallel.For(0, 10, i =>
               {
-                  Log($"S {i}");
-                  Task.Delay(10).Wait();
+                  Log($"S {i}"); 
+                  //Task.Delay(20).Wait();
                   Log($"E {i}");
               });
             Console.WriteLine($"Is completed: {result.IsCompleted}");
