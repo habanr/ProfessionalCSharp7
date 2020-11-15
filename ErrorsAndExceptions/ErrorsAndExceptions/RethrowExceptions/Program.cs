@@ -13,7 +13,7 @@ namespace RethrowExceptions
             Console.ReadLine();
         }
 
-#line 100
+//#line 100
         public static void HandleAll()
         {
             var methods = new Action[]
@@ -44,7 +44,7 @@ namespace RethrowExceptions
             }
         }
 
-#line 1000
+//#line 1000
         public static void HandleWithFilter()
         {
             try
@@ -57,14 +57,14 @@ namespace RethrowExceptions
             }
         }
 
-#line 1500
+//#line 1500
         public static bool Filter(Exception ex)
         {
             Console.WriteLine($"just log {ex.Message}");
             return false;
         }
 
-#line 2000
+//#line 2000
         public static void HandleAndRethrow()
         {
             try
@@ -78,7 +78,7 @@ namespace RethrowExceptions
             }
         }
 
-#line 3000
+//#line 3000
         public static void HandleAndThrowWithInnerException()
         {
             try
@@ -92,7 +92,7 @@ namespace RethrowExceptions
             }
         }
 
-#line 4000
+//#line 4000
         public static void HandleAndThrowAgain()
         {
             try
@@ -106,7 +106,7 @@ namespace RethrowExceptions
             }
         }
 
-#line 8000
+//#line 8000
         public static void ThrowAnException(string message)
         {
             throw new MyCustomException(message);  // line 8002
